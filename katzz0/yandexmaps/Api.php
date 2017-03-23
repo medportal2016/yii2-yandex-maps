@@ -62,9 +62,9 @@ class Api extends Component
 
         self::$language = self::$language ?: (\Yii::$app->language ?: 'en-US');
 
-        if (!self::$protocol) {
+        //if (!self::$protocol) {
             self::$protocol = \Yii::$app->getRequest()->isSecureConnection ? 'https' : 'http';
-        }
+        //}
 
         if (is_array(self::$packages)) {
             self::$packages = implode(',', self::$packages);
